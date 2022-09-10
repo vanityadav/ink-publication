@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import { useState, useEffect } from "react";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 function App() {
+  const [theme, setTheme] = useState();
+  useEffect(() => {
+    let userTheme = window.localStorage.getItem("theme");
+    setTheme(userTheme ? userTheme : "light");
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  function handleTheme() {
+    setTheme(theme === "dark" ? "light" : "dark");
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id={theme} className="App">
+      <Header theme={theme} handleTheme={handleTheme} />
+      <Body />
+      <Contact theme={theme} />
+      <Footer />
     </div>
   );
 }
