@@ -12,7 +12,7 @@ export default function Header({ theme, handleTheme }) {
   const animation = {
     initial: { y: "-10vw", opacity: 0 },
     animate: { y: "0", opacity: 1 },
-    exit: { opacity: 0 },
+    exit: { opacity: 0, transition: { duration: 0 } },
     transition: { type: "spring", stiffness: 50 },
   };
   const sideanimation = {

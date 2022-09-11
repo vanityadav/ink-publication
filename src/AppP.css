@@ -13,17 +13,31 @@
     width: fit-content;
   }
   .search-box {
-    width: 64vw;
+    width: 34vw;
+    outline: none;
+    padding: 1em;
+    border: none;
+    border-radius: 2em;
+    padding-left: 6vmin;
+    font-size: clamp(0.6rem, 2vmin, 1rem);
+  }
+  .search-icon-in {
+    width: 5vmin;
+    height: 5vmin;
   }
   .search-icon,
   .theme {
     width: 3vmax;
     height: 3vmax;
+    padding-right: 1em;
   }
   .small-header-items {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    margin: auto;
+    padding: 0.5em;
+    width: 90vw;
   }
   .mheader {
     display: flex;
@@ -33,18 +47,20 @@
     position: fixed;
     left: 0;
     top: 0;
-    padding: 1em;
-    backdrop-filter: blur(4px);
+    padding: 1.6em;
     z-index: 999999999999999;
     color: var(--text-color);
-    border-radius: 1em;
+    backdrop-filter: blur(4px);
   }
   .side-header {
     display: flex;
     height: 100vh;
-    width: 30vw;
+    width: fit-content;
     flex-direction: column;
-    background-color: var(--nav-background-color);
+  }
+  .side-header p:hover {
+    color: var(--text-hover-color);
+    cursor: pointer;
   }
   .icon-header {
     display: flex;
