@@ -15,6 +15,11 @@
   .search-box {
     width: 64vw;
   }
+  .search-icon,
+  .theme {
+    width: 3vmax;
+    height: 3vmax;
+  }
   .small-header-items {
     display: flex;
     justify-content: flex-end;
