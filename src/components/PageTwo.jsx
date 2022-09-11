@@ -44,8 +44,8 @@ export default function PageTwo({ inView }) {
         <div className="research-info">
           <h2> Research Publication</h2>
           <p>
-            Help the writing and formatting of the chapters with the correct
-            format, style, and flow of the chapters
+            Help with writing and formatting of the chapters with the correct
+            format, style, and flow.
           </p>
           <button className="view-more">Publish Help</button>
         </div>

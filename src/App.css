@@ -229,10 +229,316 @@ header {
   transform: scale(105%);
 }
 
+/*                   Body Styles           */
+
+.main-body {
+  width: 80vw;
+  margin: auto;
+  min-height: 100vh;
+  padding-top: 8vh;
+  font-size: clamp(0.5rem, 2vmin, 1rem);
+}
+.about-us {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 80vw;
+  height: 30vh;
+  column-gap: 10vw;
+  margin-bottom: 8vh;
+  color: var(--text-color);
+  background-image: url("./media/background_illustration.svg");
+  background-repeat: no-repeat;
+  background-position: 20% 70%;
+}
+.heading {
+  display: flex;
+  white-space: nowrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: clamp(1em, 2vmax, 2em);
+}
+.heading h1 {
+  margin: 0;
+}
+.content-info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 38vw;
+  font-size: clamp(0.2rem, 1.5vmin, 1rem);
+}
+.home-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2vw;
+}
+.counters {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  row-gap: 2vh;
+}
+.customers,
+.countries {
+  box-sizing: border-box;
+  height: 24vh;
+  width: 18vw;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-size: clamp(0.5rem, 2vmin, 1rem);
+  background-color: rgb(236, 239, 244);
+  border-radius: 2em;
+}
+
+.big-numbers {
+  font-size: clamp(1em, 4vmin, 4em);
+}
+.big-numbers::after {
+  content: "+";
+}
+.img-container {
+  width: 60vw;
+  height: 50vh;
+}
+.home-image {
+  border-radius: 2em;
+  width: 60vw;
+  height: 50vh;
+  object-fit: cover;
+}
+.line {
+  margin-block: 8vh;
+}
+
+/*           Page Two /Three         */
+
+.research {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  margin: auto;
+  height: 60vh;
+  column-gap: 2vw;
+  color: var(--text-color);
+  font-size: clamp(0.5rem, 1.5vmin, 1rem);
+}
+.research button,
+.process-page button {
+  font-size: clamp(0.5rem, 2vmin, 1rem);
+}
+.research-heading {
+  white-space: nowrap;
+  color: var(--text-color);
+}
+.research-heading h1 {
+  margin: 0;
+  width: 36vw;
+}
+.more-links {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin-block: 4em;
+  padding: 1em;
+  border-radius: 1em;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  color: var(--text-color);
+  font-weight: 800;
+  position: relative;
+  box-sizing: border-box;
+  background-color: transparent;
+  z-index: 1;
+  overflow: hidden;
+}
+.more-links:hover::before {
+  transform: translateX(0);
+}
+.more-links:before {
+  box-sizing: border-box;
+  border-radius: 1em;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: var(--text-hover-color);
+  z-index: -1;
+  color: white;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.guidance,
+.publication {
+  position: relative;
+}
+img[alt="rs"] {
+  width: 20vw;
+  height: 60vh;
+  border-radius: 2em;
+  object-fit: cover;
+}
+.research-info h2:hover {
+  cursor: pointer;
+  color: var(--text-hover-color);
+}
+.research-info {
+  position: absolute;
+  bottom: 4vh;
+  border-radius: 2em;
+  backdrop-filter: blur(10px);
+  left: 2vw;
+  width: 16vw;
+  height: 34vh;
+  box-sizing: border-box;
+  padding: 2em;
+  background-color: var(--research-info-color);
+  text-align: center;
+}
+.process-page {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: auto;
+  height: 60vh;
+  column-gap: 2vw;
+  color: var(--text-color);
+  font-size: clamp(0.5rem, 1.5vmin, 1rem);
+}
+.view-more {
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.text-box {
+  word-break: break-all;
+  white-space: normal;
+}
+
+/*               Contact Styles         */
+
+.contact-page {
+  width: 80vw;
+  margin: auto;
+  min-height: 80vh;
+  font-size: clamp(0.5rem, 1.5vmin, 1rem);
+  color: var(--text-color);
+}
+
+.contact-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2vw;
+  height: 50vh;
+  margin-top: 4vh;
+}
+.contact-info-below-map {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-contents div p:first-child {
+  font-weight: 800;
+}
+
+/*               Map Styles         */
+
+a[href^="http://maps.google.com/maps"]
+{
+  display: none !important;
+}
+a[href^="https://maps.google.com/maps"]
+{
+  display: none !important;
+}
+
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc {
+  display: none;
+}
+.gmnoprint div {
+  background: none !important;
+}
+.map-container {
+  border-radius: 1em;
+  box-shadow: 0 0 4px rgb(236, 239, 244);
+  height: 30vh;
+  width: 30vw;
+}
+
+/*              SendMail Styles         */
+.mail-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  row-gap: 4vh;
+  width: 48vw;
+  font-size: clamp(0.5rem, 1.5vmin, 1rem);
+}
+.mail-form input,
+.mail-form textarea {
+  padding: 1em;
+  font-family: Visby Round CF;
+  font-weight: 600;
+  border-radius: 1em;
+  outline: none;
+  border: none;
+  background-color: rgb(236, 239, 244);
+  width: 34vw;
+  font-size: clamp(0.5rem, 1.5vmin, 1rem);
+}
+
+input[value="Shoot"] {
+  width: 10vw;
+  background-color: rgb(0, 204, 96);
+  cursor: pointer;
+}
+
+.mail-status {
+  position: fixed;
+  top: 10vh;
+  right: 0;
+  z-index: 9999999;
+  background-color: rgba(236, 239, 244, 0.6);
+  padding: 1em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1vw;
+  backdrop-filter: blur(10px);
+}
+
+img[alt="sent"] {
+  filter: invert(51%) sepia(94%) saturate(1363%) hue-rotate(108deg)
+    brightness(97%) contrast(101%);
+  height: 8vmin;
+}
+img[alt="failed"] {
+  filter: invert(52%) sepia(88%) saturate(6971%) hue-rotate(349deg)
+    brightness(89%) contrast(151%);
+  height: 8vmin;
+}
+
 /*                    Footer Styles           */
 
 footer {
-  font-size: clamp(0.5rem, 2vmin, 1rem);
+  font-size: clamp(0.5rem, 1.5vmin, 1rem);
   white-space: nowrap;
   color: var(--text-color);
   position: static;
@@ -292,7 +598,7 @@ footer {
 }
 .socials img {
   transition: transform 0.3s;
-  height: 3vh;
+  height: 2vmin;
 }
 
 img[alt="uparrow"] {
@@ -307,300 +613,4 @@ img[alt="uparrow"]:hover {
 }
 .arrowdown {
   transform: rotate(-180deg);
-}
-
-/*                   Body Styles           */
-
-.main-body {
-  width: 80vw;
-  margin: auto;
-  min-height: 100vh;
-  padding-top: 8vh;
-  font-size: clamp(0.5rem, 2vmin, 1rem);
-}
-.about-us {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  width: 80vw;
-  height: 30vh;
-  column-gap: 10vw;
-  margin-bottom: 8vh;
-  color: var(--text-color);
-  background-image: url("./media/background_illustration.svg");
-  background-repeat: no-repeat;
-  background-position: 20% 70%;
-}
-.heading {
-  display: flex;
-  white-space: nowrap;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-size: clamp(1.5em, 2vmax, 2em);
-}
-.heading h1 {
-  margin: 0;
-}
-.content-info {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 38vw;
-  font-size: clamp(0.5rem, 2vmin, 1rem);
-}
-.home-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 2vw;
-}
-.counters {
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column;
-  row-gap: 2vh;
-}
-.customers,
-.countries {
-  height: 24vh;
-  width: 18vw;
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  align-items: flex-start;
-  justify-content: flex-end;
-  font-size: clamp(1rem, 6vmin, 1rem);
-  background-color: rgb(236, 239, 244);
-  border-radius: 2em;
-}
-
-.big-numbers {
-  font-size: clamp(0.5rem, 8vmin, 4rem);
-}
-.big-numbers::after {
-  content: "+";
-}
-.img-container {
-  width: 60vw;
-  height: 50vh;
-}
-.home-image {
-  border-radius: 2em;
-  width: 60vw;
-  height: 50vh;
-  object-fit: cover;
-}
-.line {
-  margin-block: 8vh;
-}
-
-.research {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: row-reverse;
-  margin: auto;
-  height: 60vh;
-  column-gap: 2vw;
-  color: var(--text-color);
-}
-.process-page {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: auto;
-  height: 60vh;
-  column-gap: 2vw;
-  color: var(--text-color);
-}
-.more-links {
-  display: flex;
-  align-items: center;
-  justify-self: center;
-  font-size: 1em;
-  margin-block: 4em;
-  padding: 1em;
-  border-radius: 1em;
-  outline: none;
-  cursor: pointer;
-  border: none;
-  color: var(--text-color);
-  font-weight: 800;
-  position: relative;
-  box-sizing: border-box;
-  background-color: transparent;
-  z-index: 1;
-  overflow: hidden;
-}
-.more-links:hover::before {
-  transform: translateX(0);
-}
-.more-links:before {
-  box-sizing: border-box;
-  border-radius: 1em;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  background-color: var(--text-hover-color);
-  z-index: -1;
-  color: white;
-  transform: translateX(-100%);
-  transition: transform 0.5s;
-}
-
-.research-heading {
-  white-space: nowrap;
-  color: var(--text-color);
-}
-.research-heading h1 {
-  margin: 0;
-  width: 36vw;
-}
-.guidance,
-.publication {
-  position: relative;
-}
-.research-info h2:hover {
-  cursor: pointer;
-  color: var(--text-hover-color);
-}
-.research-info {
-  position: absolute;
-  bottom: 4vh;
-  border-radius: 2em;
-  backdrop-filter: blur(10px);
-  left: 2vw;
-  width: 16vw;
-  height: 34vh;
-  box-sizing: border-box;
-  padding: 2em;
-  background-color: var(--research-info-color);
-  text-align: center;
-}
-img[alt="rs"] {
-  width: 20vw;
-  height: 60vh;
-  border-radius: 2em;
-  object-fit: cover;
-}
-.view-more {
-  border: none;
-  background-color: transparent;
-  color: var(--text-color);
-  cursor: pointer;
-  text-decoration: underline;
-}
-.text-box {
-  word-break: break-all;
-  white-space: normal;
-}
-
-/*               Contact Styles         */
-
-.contact-page {
-  width: 80vw;
-  margin: auto;
-  min-height: 80vh;
-  font-size: clamp(0.5rem, 2vmin, 1rem);
-  color: var(--text-color);
-}
-
-.contact-contents {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 2vw;
-  height: 50vh;
-  margin-top: 4vh;
-}
-.contact-info-below-map {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.contact-contents div p:first-child {
-  font-weight: 800;
-}
-
-/*               Map Styles         */
-
-a[href^="http://maps.google.com/maps"]
-{
-  display: none !important;
-}
-a[href^="https://maps.google.com/maps"]
-{
-  display: none !important;
-}
-
-.gmnoprint a,
-.gmnoprint span,
-.gm-style-cc {
-  display: none;
-}
-.gmnoprint div {
-  background: none !important;
-}
-.map-container {
-  border-radius: 1em;
-  box-shadow: 0 0 4px rgb(236, 239, 244);
-  height: 30vh;
-  width: 30vw;
-}
-
-/*              SendMail Styles         */
-.mail-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  row-gap: 4vh;
-  width: 48vw;
-}
-.mail-form input,
-.mail-form textarea {
-  padding: 1em;
-  font-family: Visby Round CF;
-  font-weight: 600;
-  border-radius: 1em;
-  outline: none;
-  border: none;
-  background-color: rgb(236, 239, 244);
-  width: 34vw;
-}
-
-input[value="Shoot"] {
-  width: 10vw;
-  background-color: rgb(0, 204, 96);
-  cursor: pointer;
-}
-
-.mail-status {
-  position: fixed;
-  top: 10vh;
-  right: 0;
-  z-index: 9999999;
-  background-color: rgba(236, 239, 244, 0.6);
-  padding: 1em;
-  border-radius: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 1vw;
-  backdrop-filter: blur(10px);
-}
-
-img[alt="sent"] {
-  filter: invert(51%) sepia(94%) saturate(1363%) hue-rotate(108deg)
-    brightness(97%) contrast(101%);
-  height: 8vh;
-}
-img[alt="failed"] {
-  filter: invert(52%) sepia(88%) saturate(6971%) hue-rotate(349deg)
-    brightness(89%) contrast(151%);
-  height: 8vh;
 }

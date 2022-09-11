@@ -1,0 +1,175 @@
+@media (orientation: portrait) {
+  /*                   Body Styles           */
+
+  .main-body {
+    width: 90vw;
+    margin: auto;
+    min-height: 100vh;
+    padding-top: 8vh;
+    font-size: clamp(0.6rem, 2vmin, 1rem);
+  }
+
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 5vh;
+    margin-bottom: 2vh;
+    color: var(--text-color);
+    background-image: url("./media/background_illustration.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 90vw;
+    height: auto;
+    text-align: center;
+  }
+  .content-info {
+    display: flex;
+    width: 60vw;
+    font-size: clamp(0.6rem, 1.5vmin, 1rem);
+  }
+  .home-items {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vh;
+  }
+  .counters {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    column-gap: 4vw;
+  }
+  .customers,
+  .countries {
+    box-sizing: border-box;
+    height: 10vh;
+    width: 43vw;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: flex-end;
+    font-size: clamp(0.6rem, 2vmin, 1rem);
+    background-color: rgb(236, 239, 244);
+    border-radius: 2em;
+  }
+  .big-numbers {
+    font-size: clamp(3em, 6vmin, 4em);
+  }
+  .img-container {
+    width: 90vw;
+    height: auto;
+  }
+  .home-image {
+    border-radius: 2em;
+    width: 90vw;
+    height: 44vh;
+    object-fit: cover;
+  }
+  .line {
+    margin-block: 6vh;
+  }
+
+  /*           Page Two /Three         */
+  .research {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    height: auto;
+    column-gap: 4vw;
+    color: var(--text-color);
+    font-size: clamp(0.6rem, 1.5vmin, 1rem);
+  }
+  .research button,
+  .process-page button {
+    font-size: clamp(0.6rem, 2vmin, 1rem);
+  }
+  .more-links {
+    margin-block: 2vh;
+  }
+  img[alt="rs"] {
+    width: 43vw;
+    height: 40vh;
+    border-radius: 2em;
+    object-fit: cover;
+  }
+  .research-info {
+    position: absolute;
+    bottom: 1.5vh;
+    border-radius: 2em;
+    backdrop-filter: blur(10px);
+    left: 2vw;
+    width: 39vw;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 2em;
+    background-color: var(--research-info-color);
+    text-align: center;
+  }
+  .process-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: auto;
+    height: auto;
+    column-gap: 4vw;
+    color: var(--text-color);
+    font-size: clamp(0.6rem, 1.5vmin, 1rem);
+  }
+  .contact-page {
+    width: 90vw;
+    margin: auto;
+    height: auto;
+    font-size: clamp(0.6rem, 1.5vmin, 1rem);
+    color: var(--text-color);
+  }
+  .contact-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vh;
+    height: auto;
+    margin-top: 2vh;
+  }
+  .map-container {
+    border-radius: 1em;
+    box-shadow: 0 0 4px rgb(236, 239, 244);
+    height: 30vh;
+    width: 90vw;
+  }
+  .mail-form {
+    row-gap: 2vh;
+    width: 90vw;
+    font-size: clamp(0.6rem, 1.5vmin, 1rem);
+  }
+  .mail-form input,
+  .mail-form textarea {
+    width: 60vw;
+    font-size: clamp(0.6rem, 1.5vmin, 1rem);
+  }
+  input[value="Shoot"] {
+    width: 40vw;
+  }
+  footer {
+    margin-top: 2vh;
+    font-size: clamp(0.4rem, 1.5vmin, 1rem);
+  }
+  .flying-footer {
+    max-width: 90vw;
+  }
+  .footer-info {
+    row-gap: 1vh;
+  }
+  .footer {
+    max-width: 90vw;
+  }
+}
