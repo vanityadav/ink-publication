@@ -398,7 +398,7 @@ img[alt="rs"] {
   backdrop-filter: blur(10px);
   left: 2vw;
   width: 16vw;
-  height: 34vh;
+  height: fit-content;
   box-sizing: border-box;
   padding: 2em;
   background-color: var(--research-info-color);
