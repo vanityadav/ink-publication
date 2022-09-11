@@ -1,5 +1,118 @@
-@media (orientation: portrait) {
-  /*                   Body Styles           */
+@media screen and (max-aspect-ratio: 1/1) {
+  /*             Header Styles         */
+
+  header {
+    font-size: clamp(0.6rem, 2vmin, 1rem);
+  }
+  .header-items {
+    width: 90vw;
+  }
+  .journal-menu,
+  .publish-menu,
+  .payment-menu {
+    width: fit-content;
+  }
+  .search-box {
+    width: 64vw;
+  }
+  .small-header-items {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .mheader {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    row-gap: 1em;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 1em;
+    backdrop-filter: blur(4px);
+    z-index: 999999999999999;
+    color: var(--text-color);
+    border-radius: 1em;
+  }
+  .side-header {
+    display: flex;
+    height: 100vh;
+    width: 30vw;
+    flex-direction: column;
+    background-color: var(--nav-background-color);
+  }
+  .icon-header {
+    display: flex;
+    height: 1em;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .upper-line {
+    border-top: 2px solid var(--text-hover-color);
+    width: 2rem;
+  }
+  .lower-line {
+    border-bottom: 2px solid var(--text-hover-color);
+    width: 1rem;
+  }
+
+  .line-up {
+    animation: closeu 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+  .line-down {
+    animation: closel 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+  .open-up {
+    animation: openu 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+  .open-down {
+    animation: openl 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+
+  @keyframes closel {
+    from {
+      width: 1rem;
+      transform: translateY(0) rotate(0);
+    }
+
+    to {
+      width: 2rem;
+      transform: translateY(-0.4em) rotate(-45deg);
+    }
+  }
+  @keyframes closeu {
+    from {
+      transform: translateY(0) rotate(0);
+    }
+
+    to {
+      width: 2rem;
+      transform: translateY(0.5em) rotate(45deg);
+    }
+  }
+  @keyframes openl {
+    from {
+      width: 2rem;
+      transform: translateY(-0.4em) rotate(-45deg);
+    }
+
+    to {
+      width: 1rem;
+      transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes openu {
+    from {
+      width: 2rem;
+      transform: translateY(0.5em) rotate(45deg);
+    }
+
+    to {
+      transform: translateY(0) rotate(0);
+    }
+  }
+
+  /*       Body Styles           */
 
   .main-body {
     width: 90vw;
@@ -45,7 +158,7 @@
   .customers,
   .countries {
     box-sizing: border-box;
-    height: 10vh;
+    height: 16vh;
     width: 43vw;
     padding: 2em;
     display: flex;
@@ -58,7 +171,7 @@
     border-radius: 2em;
   }
   .big-numbers {
-    font-size: clamp(3em, 6vmin, 4em);
+    font-size: clamp(3em, 4vmin, 4em);
   }
   .img-container {
     width: 90vw;
@@ -67,7 +180,7 @@
   .home-image {
     border-radius: 2em;
     width: 90vw;
-    height: 44vh;
+    height: 43vh;
     object-fit: cover;
   }
   .line {
