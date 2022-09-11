@@ -44,7 +44,9 @@ export default function Contact({ theme }) {
               </div>
             </div>
           </div>
-          <SendMail />
+          <div>
+            <SendMail />
+          </div>
         </div>
       </div>
     </>
