@@ -1,11 +1,18 @@
 import React from "react";
-import payment from "../media/4.jpg";
-import publication from "../media/1.jpg";
+import payment from "../media/4e.jpg";
+import publication from "../media/1e.jpg";
 
-export default function PageThree() {
+export default function PageThree({ inView }) {
   return (
     <>
-      <div className="process-page">
+      <div
+        className="process-page"
+        style={{
+          transform: inView ? "none" : "translateY(200px)",
+          opacity: inView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
+        }}
+      >
         <div className="research-heading">
           <h1>How it Works</h1>
           <p className="text-box">
@@ -23,7 +30,7 @@ export default function PageThree() {
           <button className="more-links">View More &#8663;</button>
         </div>
         <div className="guidance">
-          <img src={publication} alt="rs" />
+          <img loading="lazy" src={publication} alt="rs" />
           <div className="research-info">
             <h2> Publication Process</h2>
             <p>
@@ -34,7 +41,7 @@ export default function PageThree() {
           </div>
         </div>
         <div className="publication">
-          <img src={payment} alt="rs" />
+          <img loading="lazy" src={payment} alt="rs" />
           <div className="research-info">
             <h2>Payment Process</h2>
             <p>
