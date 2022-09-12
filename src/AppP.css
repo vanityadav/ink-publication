@@ -44,13 +44,14 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    row-gap: 1em;
+    row-gap: 4vh;
     position: fixed;
     left: 0;
     top: 0;
     border: 3vmax solid transparent;
     z-index: 999999999999999;
     color: var(--text-color);
+    font-size: clamp(0.6rem, 2vmin, 1rem);
     transition: backdrop-filter 1s, box-shadow 1s;
   }
   .mani {
