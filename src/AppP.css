@@ -40,6 +40,7 @@
     width: 90vw;
   }
   .mheader {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -47,10 +48,14 @@
     position: fixed;
     left: 0;
     top: 0;
-    padding: 1.6em;
+    border: 3vmax solid transparent;
     z-index: 999999999999999;
     color: var(--text-color);
-    backdrop-filter: blur(4px);
+    transition: backdrop-filter 1s, box-shadow 1s;
+  }
+  .mani {
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 0 10px 10px var(--nav-background-color);
   }
   .side-header {
     display: flex;
@@ -62,6 +67,7 @@
     color: var(--text-hover-color);
     cursor: pointer;
   }
+
   .icon-header {
     display: flex;
     height: 1em;

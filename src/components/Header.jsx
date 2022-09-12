@@ -45,28 +45,36 @@ export default function Header({ theme, handleTheme }) {
 
   return (
     <>
-      <div className="mheader" onClick={handelHeader}>
-        <div className="icon-header">
-          <div
-            className={sideHeader ? "upper-line line-up" : "upper-line open-up"}
-          ></div>
-          <div
-            className={
-              sideHeader ? "lower-line line-down" : "lower-line open-down"
-            }
-          ></div>
-        </div>
-        <AnimatePresence>
-          {sideHeader && (
-            <motion.div {...sideanimation} className="side-header">
-              <p>Ink Publication</p>
-              <p>Journals</p>
-              <p>Publication</p>
-              <p>Payment</p>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+      <AnimatePresence>
+        <motion.div
+          {...sideanimation}
+          className={sideHeader ? "mheader mani" : "mheader"}
+          onClick={handelHeader}
+        >
+          <div className="icon-header">
+            <div
+              className={
+                sideHeader ? "upper-line line-up" : "upper-line open-up"
+              }
+            ></div>
+            <div
+              className={
+                sideHeader ? "lower-line line-down" : "lower-line open-down"
+              }
+            ></div>
+          </div>
+          <AnimatePresence>
+            {sideHeader && (
+              <motion.div {...sideanimation} className="side-header">
+                <p>Ink Publication</p>
+                <p>Journals</p>
+                <p>Publication</p>
+                <p>Payment</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
       {header && (
         <>
           <header>
