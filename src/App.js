@@ -5,6 +5,7 @@ import Body from "./components/Body";
 import { useState, useEffect } from "react";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import Dropdown from "./components/Dropdown";
 
 function App() {
   const [theme, setTheme] = useState();
@@ -22,10 +23,11 @@ function App() {
   }
   return (
     <div id={theme} className="App">
-      <Header theme={theme} handleTheme={handleTheme} />
+      <Dropdown />
+      {/* <Header theme={theme} handleTheme={handleTheme} />
       <Body />
       <Contact theme={theme} />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

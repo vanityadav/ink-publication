@@ -314,3 +314,33 @@
     max-width: 90vw;
   }
 }
+
+.dropdown {
+  display: flex;
+  width: 30vw;
+  height: 5vh;
+  background-color: blue;
+  margin: auto;
+  align-items: center;
+  position: relative;
+  user-select: none;
+}
+.dropdown-button {
+  width: 100%;
+  background-color: blueviolet;
+  padding: 1em;
+}
+.dropdown-content {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+}
+.dropdown-item {
+  padding-block: 0.5em;
+  background-color: red;
+  width: 100%;
+}
+.dropdown-item:hover {
+  background-color: aqua;
+}
