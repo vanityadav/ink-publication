@@ -23,11 +23,11 @@ function App() {
   }
   return (
     <div id={theme} className="App">
-      <Dropdown />
-      {/* <Header theme={theme} handleTheme={handleTheme} />
+      {/* <Dropdown /> */}
+      <Header theme={theme} handleTheme={handleTheme} />
       <Body />
       <Contact theme={theme} />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
